@@ -3,12 +3,13 @@
 
 include 'config.php';
 
-$q_tit = $_POST['q_title'];
-$question =$_POST['question'];
-$q_id = $_POST['q_id'];
+$q_tit = $_POST['soru-baslık'];
+$question =$_POST['soru'];
+$q_id = $_POST['soru-id'];
 
-$sql = "UPDATE question SET q_title='$q_tit' and question='$question'  WHERE id=$q_id;";
-//echo $sql;
+$sql = "UPDATE questions SET q_title='$q_tit' , question='$question'  WHERE q_id='$q_id'";
 mysqli_query($conn, $sql);
+//echo $sql;
+
 header("Location:questions.php");
 ?>

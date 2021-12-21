@@ -22,14 +22,21 @@
             $q_name = $row['q_title'];
             $soru = $row['question'];
             
+            
         }
     ?>
     
 
     <form action="q-update.php" method="post">
+    <div>Soru ID
+        <input type="text" name="soru-id" value="<?php echo $q_id; ?>">
+        </div>
+        <br>
+
         <div>Soru Başlıgı
         <input type="text" name="soru-baslık" value="<?php echo $q_name; ?>">
         </div>
+
         <br>
         <div>Sorunuz      <textarea name= "soru" COLS=70 ROWS=15><?php echo $soru; ?></textarea>
         </div>

@@ -17,6 +17,7 @@ mysqli_query($conn, $sql);
 $last_id = mysqli_insert_id($conn);
 if($last_id > 0)
 {
+      
     echo "Soru eklendi. " . $last_id;
     header("Location: questions.php");
 }

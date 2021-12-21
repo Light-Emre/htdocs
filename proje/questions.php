@@ -96,8 +96,17 @@ $num_rows = mysqli_num_rows($result);
                             if($num_rows9 > 0){
 
 
-                                echo '<a href="q-delete-form.php?q_id=' . $row['q_id'] . '">Sil</a>';
+                                echo '<a href="q-delete-form.php?q_id=' . $row['q_id'] . '">Sil</a> - ';
                             }else{}
+
+                            //Yanıtla Butonu
+                            $sql7="SELECT q_id from questions WHERE q_id=$q_id ";
+                            $result7 = mysqli_query($conn,$sql7);
+                            $num_rows7 = mysqli_num_rows($result7);
+                            if($num_rows7 > 0){
+                                echo "<a href='q-page.php?q_id=$q_id&user_id=$user_id'>Yanıtla</a>";
+                            }
+
 
 
                             
