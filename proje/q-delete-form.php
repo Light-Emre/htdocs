@@ -19,7 +19,7 @@
         if($num_rows > 0){
             $row = mysqli_fetch_assoc($result);
             $q_baslık = $row['q_title'];
-            $q_tarih = $row['q_date'];
+            $q_tarih = $row['d_date'];
         }
     ?>
     <table>
