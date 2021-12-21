@@ -35,7 +35,7 @@ $num_rows = mysqli_num_rows($result);
                     echo '<a href="">';
                         echo '<div class="some">';
                             echo "<h4 id='box3'>".$row['q_username']. "</h4>";
-                            echo "<small id='box2'>".$row['q_date']."</small>";  echo "</br>";
+                            echo "<small id='box2'>".$row['d_date']."</small>";  echo "</br>";
                             echo "<h3 id='baslik'>".$row['q_title']."</h3>";
                             echo "<p id='soruyer'>".$row['question']."</p>";
 
