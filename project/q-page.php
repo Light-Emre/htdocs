@@ -39,7 +39,7 @@ echo "<a href='questions.php'>Geri Dön</a>"
                         echo "<p >".$row7['question']."</p>";
                          // Like butonu
 
-                         $sql2 = "SELECT COUNT(*) as count FROM likes WHERE q_id = $q_id2 AND type=1";
+                         $sql2 = "SELECT COUNT(*) as count FROM likes WHERE q_id = $q_id2 AND type=1 and c_id= 0 ";
                          $result2 = mysqli_query($conn,$sql2);
                          $row2 = mysqli_fetch_assoc($result2);
                          $like = $row2['count'];
@@ -59,7 +59,7 @@ echo "<a href='questions.php'>Geri Dön</a>"
 
                          // Dislike butonu
 
-                         $sql4 = "SELECT COUNT(*) as count FROM likes WHERE q_id = $q_id2 AND type=2";
+                         $sql4 = "SELECT COUNT(*) as count FROM likes WHERE q_id = $q_id2 AND type=2  and c_id= 0 ";
                          $result4 = mysqli_query($conn,$sql4);
                          $row4 = mysqli_fetch_assoc($result4);
                          $dislike = $row4['count'];
