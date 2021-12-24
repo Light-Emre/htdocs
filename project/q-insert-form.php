@@ -12,11 +12,11 @@
 <body>
     <form action="q-insert.php" method="post">
         <div>Soru Başlıgı
-        <input type="text" name="q_title">
+        <input type="text" required='required' name="q_title">
         </div>
         <br>
         <div>Sorunuz    
-            <textarea name="question" id="" cols="30" rows="10"></textarea>
+            <textarea name="question" required='required' id="" cols="30" rows="10"></textarea>
         </div>
         <div> <br>
         <label for="cars">Soru kategorisi:</label>
