@@ -21,6 +21,7 @@
             $row = mysqli_fetch_assoc($result);
             $q_name = $row['q_title'];
             $soru = $row['question'];
+            $soru_kategori=$row['category'];    
             
             
         }
@@ -40,6 +41,14 @@
         <br>
         <div>Sorunuz      <textarea name= "soru" COLS=70 ROWS=15><?php echo $soru; ?></textarea>
         </div>
+        <br>
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="soru-kategori">
+            <option value="Bilgisayar">Bilgisayar</option>
+            <option value="Spor">Spor</option>
+            <option value="Hayat">Hayat</option>
+            <option value="Hobi ">Hobi</option>
+        </select>
         <div> <br>
             <input type="submit" value="Güncelle">
         </div>

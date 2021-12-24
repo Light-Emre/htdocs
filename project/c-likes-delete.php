@@ -11,7 +11,7 @@
     
     
 
-    $sql6 =  "DELETE FROM likes WHERE c_id = $c_id AND user_id=$user_id AND q_id=$q_id";
+    $sql6 =  "DELETE FROM c_likes WHERE c_id = $c_id AND user_id=$user_id AND q_id=$q_id";
     mysqli_query($conn,$sql6);
     header("Location: $urlal");
     

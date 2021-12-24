@@ -12,8 +12,12 @@ session_unset();
 
 // oturumu kapat
 session_destroy();
+
+header("Location: login.php");
+
 ?>
 <hr>
-<a href="index.php">Çıkış Yapıldı</a>
+
+
 </body>
 </html>

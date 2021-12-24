@@ -19,8 +19,15 @@
             <textarea name="question" id="" cols="30" rows="10"></textarea>
         </div>
         <div> <br>
+        <label for="cars">Soru kategorisi:</label>
+        <select id="cars" name="category">
+            <option value="Bilgisayar">Bilgisayar</option>
+            <option value="Spor">Spor</option>
+            <option value="Hayat">Hayat</option>
+            <option value="Hobi ">Hobi</option>
+        </select>
             <input type="submit" value="Ekle">
         </div>
-    </form>
+    </form> 
 </body>
 </html>
