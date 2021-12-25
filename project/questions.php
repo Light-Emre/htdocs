@@ -24,7 +24,7 @@ $sql = "SELECT * FROM questions WHERE category='$cate2' ORDER BY q_id DESC ";
 $result = mysqli_query($conn,$sql);
 $num_rows = mysqli_num_rows($result);
 
-$sql19 = "SELECT * FROM questions ORDER BY q_id DESC ";
+$sql19 = "SELECT questions.*, count(likes.q_id) as like_count from questions left join likes on questions.q_id=likes.q_id group by questions.q_id order by like_count DESC ";
 $result19 = mysqli_query($conn,$sql19);
 $num_rows19 = mysqli_num_rows($result19);
 $urlal=$_SERVER['REQUEST_URI'];
