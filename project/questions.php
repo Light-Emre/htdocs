@@ -20,11 +20,11 @@ include 'config.php';
 $cate2 = $_GET['category'];
 
 
-$sql = "SELECT * FROM questions WHERE category='$cate2' ORDER BY q_id DESC ";
+$sql = "SELECT questions.*, count(likes.q_id) as like_count from questions left join likes on questions.q_id=likes.q_id  where questions.category like '$cate2' and likes.type<2 group by questions.q_id order by like_count DESC ";
 $result = mysqli_query($conn,$sql);
 $num_rows = mysqli_num_rows($result);
 
-$sql19 = "SELECT questions.*, count(likes.q_id) as like_count from questions left join likes on questions.q_id=likes.q_id group by questions.q_id order by like_count DESC ";
+$sql19 = "SELECT questions.*, count(likes.q_id) as like_count from questions  left join likes on questions.q_id=likes.q_id where likes.type<2 group by questions.q_id order by like_count DESC ";
 $result19 = mysqli_query($conn,$sql19);
 $num_rows19 = mysqli_num_rows($result19);
 $urlal=$_SERVER['REQUEST_URI'];

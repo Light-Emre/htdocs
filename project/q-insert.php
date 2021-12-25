@@ -19,6 +19,9 @@ $last_id = mysqli_insert_id($conn);
 if($last_id > 0)
 {
     echo "Soru eklendi. " . $last_id;
+    $sql66 = "INSERT INTO likes ( user_id,q_id, type) VALUES ('0','$last_id','0' )";
+    mysqli_query($conn, $sql66);
+
     header("Location: questions.php");
 }
 else
