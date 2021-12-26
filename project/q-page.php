@@ -75,6 +75,28 @@ echo "<a href='questions.php'>Geri Dön</a>"
                          echo "----------";
                          echo "</p>";
 
+                         // Düzenle butonu
+
+                         $sql61 =  "SELECT * FROM questions WHERE q_id = $q_id2 AND user_id=$user_id ";
+                         $result61 = mysqli_query($conn,$sql61);
+                         $num_rows61 = mysqli_num_rows($result61);
+                         if($num_rows61 > 0){
+
+                             echo "<a href='q-update-form.php?q_id=$q_id2  '>Düzenle</a> -";
+                         }else{}
+
+                         // Sil butonu
+
+                         $sql62 =  "SELECT * FROM questions WHERE q_id = $q_id2 AND user_id=$user_id";
+                         $result62 = mysqli_query($conn,$sql62);
+                         $num_rows62 = mysqli_num_rows($result62);
+                         
+                         if($num_rows61 > 0){
+
+
+                             echo "<a href='q-delete-form.php?q_id=$q_id2'>Sil</a> - ";
+                         }else{}
+
                 echo '</div>' ;      
         echo '</div>';
         }
