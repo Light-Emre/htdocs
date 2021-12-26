@@ -24,11 +24,11 @@
     ?>
     <table>
         <tr>
-            <td>Soru</td>
+            <td>Soru : </td>
             <td><?php echo $q_baslık; ?></td>
         </tr>
         <tr>
-            <td>Tarih</td>
+            <td>Tarih :</td>
             <td><?php echo $q_tarih; ?></td>
         </tr>
     </table>
