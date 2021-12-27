@@ -19,10 +19,6 @@ $last_id2 = mysqli_insert_id($conn);
 if($last_id2 > 0)
 {
     echo "Soru eklendi. " . $last_id2;
-    $sql68 = "INSERT INTO c_likes ( user_id,q_id,c_id, type) VALUES ('0','$sorusu','$last_id2','0' )";
-    mysqli_query($conn, $sql68);
-
-    //echo $sql68;
     header("Location: q-page.php?q_id=$sorusu");
 }
 else

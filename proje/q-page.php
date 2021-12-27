@@ -15,19 +15,14 @@ include "config.php";
 
 $q_id2 = $_GET['q_id'];
 $user_id = $_SESSION['user_id'];
-$urlal=$_SERVER['REQUEST_URI'];
 
 $sql8="SELECT * from questions WHERE q_id=$q_id2 ";
 $result8 = mysqli_query($conn,$sql8);
 $num_rows8 = mysqli_num_rows($result8);
 
-$sql58 = "SELECT comment.*, count(c_likes.q_id) as like_count from comment left join c_likes on comment.c_id=c_likes.c_id  where c_likes.type<2 and q_id = $q_id2 group by comment.c_id order by like_count DESC ";
-$result58 = mysqli_query($conn,$sql58);
-$num_rows58 = mysqli_num_rows($result58);
+$urlal=$_SERVER['REQUEST_URI'];
 
 
-
-echo "<a href='questions.php'>Geri Dön</a>"
 
 ?>
 
@@ -87,7 +82,7 @@ echo "<a href='questions.php'>Geri Dön</a>"
                          $num_rows61 = mysqli_num_rows($result61);
                          if($num_rows61 > 0){
 
-                             echo "<a href='q-update-form.php?q_id=$q_id2  '>Düzenle</a> -";
+                             echo "<a href='q-update-form.php?q_id=$q_id2&url=$urlal '>Düzenle</a> -";
                          }else{}
 
                          // Sil butonu
@@ -95,11 +90,11 @@ echo "<a href='questions.php'>Geri Dön</a>"
                          $sql62 =  "SELECT * FROM questions WHERE q_id = $q_id2 AND user_id=$user_id";
                          $result62 = mysqli_query($conn,$sql62);
                          $num_rows62 = mysqli_num_rows($result62);
-                         
+
                          if($num_rows61 > 0){
 
 
-                             echo "<a href='q-delete-form.php?q_id=$q_id2'>Sil</a> - ";
+                             echo "<a href='q-delete-form.php?q_id=$q_id2&url=$urlal'>Sil</a> - ";
                          }else{}
 
                 echo '</div>' ;      
@@ -120,19 +115,19 @@ $num_rows14 = mysqli_num_rows($result14);
 ?>
 
 <?php
-    if($num_rows58 > 0){
-        while($row58 = mysqli_fetch_assoc($result58)){
-            $q_id2 = $row58['que_id'];
-            $c_id = $row58['c_id'];
+    if($num_rows14 > 0){
+        while($row14 = mysqli_fetch_assoc($result14)){
+            $q_id2 = $row14['que_id'];
+            $c_id = $row14['c_id'];
 
             
             
             echo '<div>';
                 echo "<div class='yorumcss'>";
-                    echo "<h4 class='yorumisim'>".$row58['c_username']. "</h4>";
-                    echo "<small class='datecss'>".$row58['c_date']."</small>";  
+                    echo "<h4 class='yorumisim'>".$row14['c_username']. "</h4>";
+                    echo "<small class='datecss'>".$row14['c_date']."</small>";  
                     echo "</br>";
-                    echo "<p class='pyorum'>".$row58['c_comment']."</p>";
+                    echo "<p class='pyorum'>".$row14['c_comment']."</p>";
                     // Like butonu
 
                     $sql24 = "SELECT COUNT(*) as count FROM c_likes WHERE c_id = $c_id AND type=1 and q_id=$q_id2";
