@@ -13,12 +13,13 @@
     <title>Soru Düzenle</title>
     <link rel="stylesheet" href="update.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="anasayfa3.css">
+    <link rel="stylesheet" href="bar-update.css">
 </head>
 <body>
     <?php
 
     if(isset($_SESSION['username'])){
+
         echo "<ul class='liste'>";
         echo "<li style='margin-left:20px;'><a href='q-insert-form.php?url=$urlal'>Soru Ekle</a></li>";
         echo "<li style='margin-left:20px;'><a href='Home.php'>Tüm sorular</a></li>";
@@ -28,7 +29,7 @@
         echo "<li><a href='Home.php?category=Sağlık'>Sağlık</a></li>";
         echo "<li style='float:right; margin-right:20px;'><a href='logout.php'>Çıkış Yap</a></li>";
     echo "</ul>";
-    echo '<p>Merhaba, ' . $_SESSION['username'] . '</p>';
+ 
 }
 else{
     echo '<p>Ana Sayfaya Ulaşmak İçin Giriş Yapınız</p>';
@@ -75,14 +76,14 @@ else{
         </div>
 
         <div class="wrap-input100 validate-input" name="q_tittle" data-validate="Soru Başlığı">
-        <input class="input100" type="text" name="soru_baslik" placeholder="Soru Başlığı" value="<?php echo $q_name; ?>" style="color: rgb(20, 9, 68);">
+        <input class="input100" type="text" style="color: rgb(20, 9, 68);"  required='required' name="soru_baslik" placeholder="Soru Başlığı" value="<?php echo $q_name; ?>" style='color:#403866 ;'>
          <span class="focus-input100"></span>
         </div>
 
         <input type="hidden" name="url" value="<?php echo $urlal; ?>">
 
         <div class="wrap-input100 validate-input" name="question" data-validate="Sorunuz">
-          <textarea class="input100" name="soru" placeholder="Sorunuz" style="color: rgb(20, 9, 68);"><?php echo $soru; ?></textarea>
+          <textarea class="input100" required='required' style="color: rgb(20, 9, 68);" name="soru" placeholder="Sorunuz" style='color:#403866 ;'><?php echo $soru; ?></textarea>
           <span class="focus-input100"></span>
         </div>
         <div class="container-contact100-form-btn">

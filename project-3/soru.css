@@ -31,8 +31,33 @@ body{
     
 }
 
+.someyanıt{
+    width: 800px;
+  
+    margin: 50px;
+    margin-left: 102px;
+    
+  
+    
+    padding-left: 50px;
+	border: 1px solid #333;
+    border-color:rgb(180, 180, 180) ;
+    background-color:rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    padding-top: 2px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgb(187, 187, 187);
+   
+    font-size: 18px;
+}
+
+
+
 .box1{
     margin-left: 250px;
+   
     width: 600px;
     background-color: rgb(255, 125, 19);
     border-radius: 5px;
@@ -42,12 +67,105 @@ body{
 }
 
 
-   
+
+.somepage{
+    width: 800px;
+  
+    margin: 50px;
     
-    
-    
+  
+
+    padding-left: 50px;
+    padding-right: 50px;
+	border: 1px solid #333;
+    border-color:rgb(180, 180, 180) ;
+    background-color:rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    padding-top: 2px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgb(187, 187, 187);
    
+    font-size: 18px;
+    
+}
+
+.boxpage{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 600px;
+    background-color: rgb(255, 125, 19);
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgb(187, 187, 187);
+    
+
+}
+
+
+.somecom{
+    width: 800px;
+  
+    margin: 50px;
+    
+  
+
+    padding-left: 50px;
+    padding-right: 50px;
+	border: 1px solid #333;
+    border-color:rgb(180, 180, 180) ;
+    background-color:rgb(255, 255, 255);
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    padding-top: 2px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgb(187, 187, 187);
    
+    font-size: 18px;
+    
+}
+
+.boxcom{
+    margin-left: 150px;
+    width: 600px;
+    background-color: rgb(3, 15, 70);
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgb(187, 187, 187);
+    
+
+}
+
+
+.yorumkutu{
+   
+    border-radius: 10px;
+    border-color: rgb(159, 159, 202);
+}
+    
+.yorumkutu:hover{
+    -webkit-transition-duration: 300ms;
+    background-color: rgb(243, 243, 243);
+} 
+    
+.yanıtbuton{
+    background-color:rgb(255, 255, 255);
+    border:none;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    z-index: 0;
+    left: 650px;
+    background-color: rgb(201, 201, 201);
+
+}
+
+.yanıtbuton:hover{
+    cursor:pointer;
+    background-color: rgb(193, 193, 255);
+    -webkit-transition-duration: 300ms;
+}
     
 
 
@@ -110,10 +228,15 @@ li{
 }
 
 #baslik{
+    width: 600px;
+    overflow: hidden; /* taşacak kısımları gizle. */
+    white-space:pre; /* alt satırı gösterme, alt satıra inme. */
+    text-overflow: ellipsis; /* uzunsa sonuna üç nokta koy. */ 
     margin-top: 15px;
     margin-bottom: 0px;
     color: inherit;
     text-decoration: none;
+    
 }   
 
 #soruyer{
@@ -125,6 +248,21 @@ li{
     color: inherit;
     text-decoration: none;
 }
+
+#soruyer2{
+    margin-top: 15px;
+    width: 700px; 
+
+    
+    
+    color: inherit;
+    text-decoration: none;
+
+}
+
+
+
+
 
 
 
@@ -164,7 +302,7 @@ a:link{
 
 .datecss{
     position: relative;
-    bottom: 32px;
+    bottom: 27px;
     color: inherit;
     text-decoration: none;
 
@@ -172,12 +310,12 @@ a:link{
 
 
 .yorumisim{
-    position: relative;
+    
     bottom: 10px;
 }
 
 .pyorum{
-    position: relative;
+    
     bottom: 20px;
 }
 
@@ -371,6 +509,88 @@ a:link{
   height: 3px;
   background-color: rgb(255, 125, 19);
   width: 770px;
+
+  position: relative;
+    
+  right: 16px;
+  top: 5px;
+  
+  
+}
+
+
+.begen2{
+    z-index: 0;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 20   px;
+    margin-right: 0px;
+    top: 10px;
+    width: 0px;
+   
+    }
+
+.link2:hover{
+    -webkit-transition-duration: 300ms;
+    color: rgb(255, 115, 1);
+}
+
+
+
+
+
+.begenme2{
+    z-index: 0;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    bottom: 28px;
+    left: 90px;
+    width: 0px;
+    height: 3px;
+  
+  
+    
+}
+
+
+.sil2{
+    z-index: 0;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    bottom:300px;
+    left: 740px;
+    width: 50px;
+    height: 3px;
+  
+    
+
+}
+
+.duzenle2{
+    z-index: 0;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    bottom: 300px;
+    left: 660px;
+    width: 50px;
+    height: 0px;
+    background-color:red;
+    
+
+}
+
+/*
+.cizgi2{
+  color:rgb(255, 125, 19);
+  height: 3px;
+  background-color: rgb(255, 125, 19);
+  width: 770px;
   position: relative;
   z-index: 0;
   right: 16px;
@@ -378,5 +598,81 @@ a:link{
   
   
 }
+*/
+
+.paraf{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+
+
+.paraf1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    margin: 0px;
+    
+    
+}
+
+
+
+.begen3{
+    z-index: 0;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 20   px;
+    margin-right: 0px;
+    top: 25px;
+    width: 0px;
+   
+    }
+
+
+
+
+
+
+.begenme3{
+    z-index: 0;
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    bottom: 14px;
+    left: 90px;
+    width: 0px;
+    height: 3px;
+  
+  
+    
+}
+
+.cizgipage{
+    color:rgb(255, 125, 19);
+    height: 3px;
+    background-color: rgb(255, 125, 19);
+    width: 780px;
+    position: relative;
+    z-index: 0;
+    right: 10px;
+    top: 5px;
+    
+}
+
+.cizgicomment{
+    color:rgb(3, 15, 70);
+    height: 3px;
+    background-color: rgb(3, 15, 70);
+    width: 780px;
+    position: relative;
+    z-index: 0;
+    right: 10px;
+    top: 20px;
+}
+
+
 
 

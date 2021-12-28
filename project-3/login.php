@@ -12,9 +12,9 @@
 		<h2>Üye Girişi</h2> <br> <br>
 		<form action="login-control.php" method="post">
 			<p>Kullanıcı Adınız</p>
-			<input type="text" name="username" placeholder="Kullanıcı adınızı giriniz"> <br> <br> 
+			<input  required='required' type="text" name="username" placeholder="Kullanıcı adınızı giriniz"> <br> <br> 
 			<p>Şifreniz</p>
-			<input type="password" name="password" placeholder="••••••••">  <br> <br> <br>
+			<input required='required' type="password" name="password" placeholder="••••••••">  <br> <br> <br>
 			<input type="submit" name="" value="Giriş Yap">
 
 		</form>

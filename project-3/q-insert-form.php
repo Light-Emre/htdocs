@@ -6,7 +6,8 @@
 
     if(isset($_SESSION['username'])){
 
-        echo "<ul class='liste'>";
+       
+    echo "<ul class='liste'>";
         echo "<li style='margin-left:20px;'><a href='q-insert-form.php?url=$urlal'>Soru Ekle</a></li>";
         echo "<li style='margin-left:20px;'><a href='Home.php'>Tüm sorular</a></li>";
         echo "<li><a href='Home.php?category=Teknoloji'>Teknoloji</a></li>";
@@ -15,13 +16,12 @@
         echo "<li><a href='Home.php?category=Sağlık'>Sağlık</a></li>";
         echo "<li style='float:right; margin-right:20px;'><a href='logout.php'>Çıkış Yap</a></li>";
     echo "</ul>";
-    echo '<p>Merhaba, ' . $_SESSION['username'] . '</p>';
+ 
 }
 else{
     echo '<p>Ana Sayfaya Ulaşmak İçin Giriş Yapınız</p>';
     echo '<p><a href="login.php">Giriş</a></p>';
 }
-
 
 
 ?>
@@ -48,7 +48,7 @@ else{
         <div>
            <label for="category" style="font-size :22px;">Kategori Seçin:</label> 
             <select id="category" name="category" style="width:200px;height:35px;font-size:16px;">
-               <option value="Teknoloji">Teknoloji</option>
+            <option value="Teknoloji">Teknoloji</option>
                <option value="Ev/Yaşam">Ev/Yaşam</option>
                <option value="Spor">Spor</option>
                <option value="Sağlık ">Sağlık</option>
@@ -56,11 +56,11 @@ else{
                </select>
         </div> <br> 
         <div class="wrap-input100 validate-input" name="q_title" data-validate="Soru Başlığı">
-        <input class="input100" type="text" name="q_title" placeholder="Soru Başlığı" style="color: rgb(20, 9, 68);">
+        <input class="input100" style="color: rgb(20, 9, 68);"  required='required' type="text" name="q_title" placeholder="Soru Başlığı" style='color:#403866 ;'>
          <span class="focus-input100"></span>
         </div>
         <div class="wrap-input100 validate-input" name="question" data-validate="Sorunuz">
-          <textarea class="input100" name="question" placeholder="Sorunuz" style="color: rgb(20, 9, 68);"></textarea>
+          <textarea style="color: rgb(20, 9, 68);" required='required' class="input100" name="question" placeholder="Sorunuz" style='color:#403866 ;'></textarea>
           <span class="focus-input100"></span>
         </div>
         <div class="container-contact100-form-btn">

@@ -10,27 +10,27 @@
     <title>Soru Sil</title>
     <link rel="stylesheet" href="delete.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="anasayfa3.css">
+    <link rel="stylesheet" href="bar-update.css">
 </head>
 <body>
     <?php
         if(isset($_SESSION['username'])){
 
             echo "<ul class='liste'>";
-        echo "<li style='margin-left:20px;'><a href='q-insert-form.php?url=$urlal'>Soru Ekle</a></li>";
-        echo "<li style='margin-left:20px;'><a href='Home.php'>Tüm sorular</a></li>";
-        echo "<li><a href='Home.php?category=Teknoloji'>Teknoloji</a></li>";
-        echo "<li><a href='Home.php?category=Ev/Yaşam'>Ev/Yaşam</a></li>";
-        echo "<li><a href='Home.php?category=Spor'>Spor</a></li>";
-        echo "<li><a href='Home.php?category=Sağlık'>Sağlık</a></li>";
-        echo "<li style='float:right; margin-right:20px;'><a href='logout.php'>Çıkış Yap</a></li>";
-    echo "</ul>";
-    echo '<p>Merhaba, ' . $_SESSION['username'] . '</p>';
-}
-else{
-    echo '<p>Ana Sayfaya Ulaşmak İçin Giriş Yapınız</p>';
-    echo '<p><a href="login.php">Giriş</a></p>';
-}
+                echo "<li style='margin-left:20px;'><a href='q-insert-form.php?url=$urlal'>Soru Ekle</a></li>";
+                echo "<li style='margin-left:20px;'><a href='Home.php'>Tüm sorular</a></li>";
+                echo "<li><a href='Home.php?category=Bilgisayar'>Bilgisayar</a></li>";
+                echo "<li><a href='Home.php?category=Spor'>Spor</a></li>";
+                echo "<li><a href='Home.php?category=Hobi'>Hobi</a></li>";
+                echo "<li><a href='Home.php?category=Hayat'>Hayat</a></li>";
+                echo "<li style='float:right; margin-right:20px;'><a href='logout.php'>Çıkış Yap</a></li>";
+            echo "</ul>";
+            echo '<p>Merhaba, ' . $_SESSION['username'] . '</p>';
+        }
+        else{
+            echo '<p>Ana Sayfaya Ulaşmak İçin Giriş Yapınız</p>';
+            echo '<p><a href="login.php">Giriş</a></p>';
+        }
 
 
 

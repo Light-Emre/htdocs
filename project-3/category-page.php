@@ -19,7 +19,7 @@
 include 'config.php';
 
 
-$sql21 = "SELECT * FROM questions WHERE category='Teknoloji' ORDER BY q_id DESC ";
+$sql21 = "SELECT * FROM questions WHERE category='Bilgisayar' ORDER BY q_id DESC ";
 $result21 = mysqli_query($conn,$sql21);
 $num_rows21 = mysqli_num_rows($result21);
 ?>

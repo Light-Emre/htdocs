@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorular</title>
-    <link rel="stylesheet" href="soru.css">
+    <link rel="stylesheet" href="soru2.css">
     <link rel="stylesheet" href="anasayfa2.css">
     
     <!-- CSS only -->
@@ -51,7 +51,7 @@ if(isset($_SESSION['username'])){
         echo "<li><a href='Home.php?category=Sağlık'>Sağlık</a></li>";
         echo "<li style='float:right; margin-right:20px;'><a href='logout.php'>Çıkış Yap</a></li>";
     echo "</ul>";
-    echo '<p>Merhaba, ' . $_SESSION['username'] . '</p>';
+ 
 }
 else{
     echo '<p>Ana Sayfaya Ulaşmak İçin Giriş Yapınız</p>';
@@ -76,7 +76,7 @@ if( ( $cate2 == 'Teknoloji' ) || ( $cate2== 'Ev/Yaşam' ) || ($cate2 == 'Spor' )
     if($num_rows > 0){
         while($row = mysqli_fetch_assoc($result)){
             $q_id = $row['q_id'];
-            echo '<div class="box1">';
+            echo "<div class='box1'>";
                     echo "<a href='q-page.php?q_id=$q_id&user_id=$user_id'>";
                         echo '<div class="some">';
                             echo "<h4 id='box3'>".$row['q_username']. "</h4>";
