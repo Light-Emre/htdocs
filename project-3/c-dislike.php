@@ -11,7 +11,7 @@
     
     
 
-    $sql6 =  "SELECT * FROM c_likes WHERE c_id = $c_id AND  type=1 and q_id=$q_id";
+    $sql6 =  "SELECT * FROM c_likes WHERE c_id = $c_id AND user_id=$user_id AND  type=1 and q_id=$q_id";
     $result6 = mysqli_query($conn,$sql6);
     $num_rows6 = mysqli_num_rows($result6);
     if($num_rows6 > 0){
