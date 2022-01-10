@@ -8,7 +8,7 @@
     $user_id = $_SESSION['user_id'];
     $urlal = $_GET['url'];
     
-
+    
 
 
     $sql7 =  "SELECT * FROM likes WHERE q_id = $q_id AND user_id=$user_id AND type=2";
@@ -22,5 +22,4 @@
         $sql = "INSERT INTO likes (`user_id`, `q_id`, `type`) VALUES ($user_id, $q_id, 1);";
         $result = mysqli_query($conn, $sql);
         header("Location: $urlal"); }
-?>
 
